@@ -70,6 +70,7 @@ ref: https://www.youtube.com/watch?v=DflWqmppOAg&list=LL&ab_channel=DSwithBappy
 
 ```bash
     ## run the below command one by one
+    ## For Amazon EC2 use yum instead of apt -- e.g., sudo yum update
     sudo apt update
     sudo apt-get update
     sudo apt upgrade -y
