@@ -72,12 +72,12 @@ ref: https://www.youtube.com/watch?v=DflWqmppOAg&list=LL&ab_channel=DSwithBappy
     ## run the below command one by one
     ## For Amazon EC2 use yum instead of apt -- e.g., sudo yum update
     sudo apt update
-    sudo apt-get update
+    ##sudo apt-get update
     sudo apt upgrade -y
     sudo apt install git curl unzip tar make sudo vim wget -y
 
     sudo apt install python3-pip
-    sudo apt install python3.12-venvY
+    ##sudo apt install python3.12-venvY
 
     #install awscli
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
