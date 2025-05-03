@@ -31,66 +31,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-### SET UP PAGES ###
-# import the pages
 
-# main_page = st.Page(
-#     rf'{pwd}/app_pages/main.py',
-#     title='Main Page'
-# )
-
-
-# @authen(roles=['admin'])
-# def user_register_page(authenticator, st, config=None):
-#     try:
-#         if config:
-#             pre_verified = config['pre-authorized']['emails']
-#         else:
-#             pre_verified = None
-#         email_of_registered_user, \
-#         username_of_registered_user, \
-#         name_of_registered_user = authenticator.register_user(
-#             pre_authorized=pre_verified)
-#         if email_of_registered_user:
-#             st.success('User registered successfully')
-#     except Exception as e:
-#         st.error(e)
-
-
-
-
-# ## Windows Local
-# @authen(roles=['admin','editor'])
-# def render_page():
-#     econ_page = st.Page(
-#         rf'{pwd}/src/app_pages/econ.py',
-#         title='Econ Upload Page'
-#     )
-
-#     tsic_egat_page = st.Page(
-#         rf'{pwd}/src/app_pages/tsic_egat.py',
-#         title='TSIC EGAT Upload Page'
-#     )
-
-#     tsic_mea_page = st.Page(
-#         rf'{pwd}/src/app_pages/tsic_mea.py',
-#         title='TSIC MEA Upload Page'
-#     )
-
-#     tsic_pea_page = st.Page(
-#         rf'{pwd}/src/app_pages/tsic_pea.py',
-#         title='TSIC PEA Upload Page'
-#     )
-
-#     distribution_loss_page = st.Page(
-#         rf'{pwd}/src/app_pages/distribution_loss.py',
-#         title='Bulk Purchase by Month Page'
-#     )
-
-#     re_train_page = st.Page(
-#         rf'{pwd}/src/app_pages/re_train.py',
-#         title='Re-train Page'
-#     )
 
 ## When push Image to ECR
 @authen(roles=['admin','editor'])
@@ -102,30 +43,7 @@ def render_page():
 
     
     st.navigation([stock_chart_page]).run()
-    ### ------------------ ###
-    # create a navigation
-    # page_order = [
-    #     #main_page,
-    #     econ_page,
-    #     tsic_egat_page,
-    #     tsic_mea_page,
-    #     tsic_pea_page
-    # ]
-
-    # add subdirectories of the page
-    # page_order = {
-    #     #'Main Page': page_order,
-    #     'Econ': [econ_page],
-    #     'TSIC': [tsic_egat_page, tsic_mea_page,  tsic_pea_page]
-    # }
-
-    ##st.sidebar.selectbox('Menu', list(page_order.keys()))
-    # selected_page = st.navigation(page_order)
-    # selected_page.run()
-
-    ##menu = st.sidebar.radio('Menu', list(page_order.keys()))
-    ##menu = ['Economic', 'TSIC'] 
+    
     
 
 render_page()
-# user_register_page(authen_obj, st, None)
